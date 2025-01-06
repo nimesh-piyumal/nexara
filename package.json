@@ -1,0 +1,35 @@
+{
+  "name": "nexara",
+  "version": "2.0.0",
+  "main": "nexara.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimesh-piyumal/nexara.git"
+  },
+  "keywords": [
+    "scraper",
+    "web scraping",
+    "html parsing",
+    "axios",
+    "cheerio",
+    "screenshot",
+    "web content",
+    "web automation",
+    "nodejs",
+    "nexara"
+  ],
+  "author": "Nimesh Piyumal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nimesh-piyumal/nexara/issues"
+  },
+  "homepage": "https://github.com/nimesh-piyumal/nexara#readme",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cheerio": "^1.0.0"
+  }
+}
