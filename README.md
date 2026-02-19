@@ -33,7 +33,7 @@ const nexara = require('nexara');
 async function scrapeTitle() {
     try {
         // Fetch and parse in one go
-        const $ = await nexara.fetchHtml('[https://example.com](https://example.com)');
+        const $ = await nexara.fetchHtml('https://example.com');
         console.log('Page Title:', $('title').text());
     } catch (error) {
         console.error('Scraping Error:', error);
@@ -51,7 +51,7 @@ Easily scrape all `href` and `src` attributes from a target URL.
 const nexara = require('nexara');
 
 async function getAssets() {
-    const assets = await nexara.extractAssets('[https://example.com](https://example.com)');
+    const assets = await nexara.extractAssets('https://example.com');
     console.log(`Found ${assets.links.length} Links`);
     console.log(`Found ${assets.images.length} Images`);
 }
@@ -68,7 +68,7 @@ const nexara = require('nexara');
 
 async function download() {
     const result = await nexara.downloadFile(
-        '[https://via.placeholder.com/150](https://via.placeholder.com/150)', 
+        'https://8upload.com/preview/1e6e38bf72022226/nexara-test.jpg', 
         './downloaded-image.png'
     );
     console.log(result); // "File successfully downloaded to ./downloaded-image.png"
@@ -85,7 +85,7 @@ Perfect for building link previews or SEO analysis tools.
 const nexara = require('nexara');
 
 async function getSeoData() {
-    const meta = await nexara.getMeta('[https://github.com/nimesh-piyumal](https://github.com/nimesh-piyumal)');
+    const meta = await nexara.getMeta('https://github.com/nimesh-piyumal');
     console.log('Title:', meta.title);
     console.log('Description:', meta.description);
 }
@@ -102,7 +102,7 @@ const nexara = require('nexara');
 const fs = require('fs');
 
 async function takeScreenshot() {
-    const screenshotBuffer = await nexara.ssweb('[https://github.com](https://github.com)');
+    const screenshotBuffer = await nexara.ssweb('https://github.com');
     fs.writeFileSync('screenshot.png', screenshotBuffer);
     console.log('Screenshot saved as screenshot.png');
 }
@@ -124,7 +124,7 @@ async function robustRequest() {
     };
     
     // Will retry up to 3 times if the request fails
-    const response = await nexara.get('[https://example.com](https://example.com)', options, 3);
+    const response = await nexara.get('https://example.com', options, 3);
     console.log('Status Code:', response.status);
 }
 robustRequest();

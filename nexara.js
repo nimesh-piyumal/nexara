@@ -127,7 +127,7 @@ class Nexara {
      */
     static async ssweb(url) {
         const apiUrl = `https://image.thum.io/get/width/1200/crop/800/${url}`;
-        const response = await this.request(apiUrl, { responseType: 'arraybuffer' });
+        const response = await Nexara.request(apiUrl, { responseType: 'arraybuffer' });
         return response.data;
     }
 }
